@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../shared/api.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private apiService: ApiService) {}
 
   ngOnInit(): void {
+    // Send Http request
+
+    this.apiService.fetchSearch('overwatch').subscribe(
+      posts => {
+        console.log(posts);
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 
 }

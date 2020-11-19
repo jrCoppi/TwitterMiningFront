@@ -28,8 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TO -DO
 
-- Create Modules: HomePage, Search, Shared
-- Routing Modules
 - Create Services: HttpRequest,...
 - Make API requests
 - Make Front page (Header + search + lists)
